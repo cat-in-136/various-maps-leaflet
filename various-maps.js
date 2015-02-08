@@ -20,6 +20,14 @@ window.addEventListener("DOMContentLoaded", function (event) {
     "Google Maps\\RoadMap": new L.Google("ROADMAP"),
     "Google Maps\\Satellite": new L.Google("SATELLITE"),
     "Google Maps\\Terrain": new L.Google("TERRAIN"),
+    "ISCGM\\Global Elevation": L.tileLayer("http://www.iscgm.org/tiles/global/el/v2/{z}/{x}/{y}.png", {
+      maxZoom: 10,
+      attribution: "<a href='http://www.iscgm.org/' target='_blank'>ISCGM</a>"
+    }),
+    "ISCGM\\Global Land Cover": L.tileLayer("http://www.iscgm.org/tiles/global/lc/v2/{z}/{x}/{y}.png", {
+      maxZoom: 11,
+      attribution: "<a href='http://www.iscgm.org/' target='_blank'>ISCGM</a>"
+    }),
     "地理院地図\\標準地図": L.tileLayer("http://{s}.gsi.go.jp/xyz/std/{z}/{x}/{y}.png", {
       subdomains : [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ],
       minZoom: 2,
@@ -105,9 +113,53 @@ window.addEventListener("DOMContentLoaded", function (event) {
       maxZoom: 16,
       attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }), 
+    "地理院地図\\GSI\\内水域": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/inwatera_jpn/{z}/{x}/{y}.png", {
+      maxZoom: 11,
+      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }), 
+    "地理院地図\\GSI\\航路": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/ferryl_jpn/{z}/{x}/{y}.png", {
+      maxZoom: 11,
+      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }), 
+    "地理院地図\\GSI\\海岸線": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/coastl_jpn/{z}/{x}/{y}.png", {
+      maxZoom: 11,
+      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }), 
+    "地理院地図\\GSI\\行政界": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/polbndl_jpn/{z}/{x}/{y}.png", {
+      maxZoom: 11,
+      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }), 
+    "地理院地図\\GSI\\鉄道": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/rail_jpn/{z}/{x}/{y}.png", {
+      maxZoom: 11,
+      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }), 
+    "地理院地図\\GSI\\河川": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/riverl_jpn/{z}/{x}/{y}.png", {
+      maxZoom: 11,
+      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }), 
+    "地理院地図\\GSI\\道路": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/roadl_jpn/{z}/{x}/{y}.png", {
+      maxZoom: 11,
+      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }), 
+    "地理院地図\\GSI\\駅": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/rstatp_jpn/{z}/{x}/{y}.png", {
+      maxZoom: 11,
+      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }), 
+    "地理院地図\\GSI\\空港": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/airp_jpn/{z}/{x}/{y}.png", {
+      maxZoom: 11,
+      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }), 
+    "地理院地図\\GSI\\港湾": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/port_jpn/{z}/{x}/{y}.png", {
+      maxZoom: 11,
+      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }), 
+    "地理院地図\\GSI\\行政界（地名）": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/polbnda_jpn/{z}/{x}/{y}.png", {
+      maxZoom: 11,
+      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }), 
   }
 
-  var map = L.map("map", {center: [0, 0], zoom: 2});
+  var map = L.map("map", {center: [36, 138.75], zoom: 5}/*{center: [0, 0], zoom: 2}*/);
 
   L.control.scale().addTo(map);
 
