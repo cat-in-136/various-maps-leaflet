@@ -171,6 +171,8 @@ window.addEventListener("DOMContentLoaded", function (event) {
   L.Control.layerTreeControl(baseLayers, overlayLayers).addTo(map);
   baseLayers["Open Street Maps\\OSM mapnik"].addTo(map);
 
+  L.control.gps().addTo(map);
+
 }, false);
 
 })();
