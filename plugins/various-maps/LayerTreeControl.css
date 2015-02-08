@@ -1,0 +1,24 @@
+.leaflet-control-layer-tree-folder > .leaflet-control-layer-tree-folder-label::before {
+  font-family: monospace;
+  border: solid 1px #000;
+  font-size: xx-small;
+  margin-right: 0.5em;
+}
+
+.leaflet-control-layer-tree-folder:not([data-extend=true]) > .leaflet-control-layer-tree-folder-label::before {
+  content: "+";
+}
+
+.leaflet-control-layer-tree-folder[data-extend=true] > .leaflet-control-layer-tree-folder-label::before {
+  content: "-";
+}
+
+.leaflet-control-layer-tree-folder > .leaflet-control-layer-tree-item,
+.leaflet-control-layer-tree-folder > .leaflet-control-layer-tree-folder {
+  margin-left: 5px;
+}
+
+.leaflet-control-layer-tree-folder:not([data-extend=true]) > .leaflet-control-layer-tree-item,
+.leaflet-control-layer-tree-folder:not([data-extend=true]) > .leaflet-control-layer-tree-folder {
+  display: none;
+}
