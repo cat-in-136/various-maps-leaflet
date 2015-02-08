@@ -161,6 +161,8 @@ window.addEventListener("DOMContentLoaded", function (event) {
 
   var map = L.map("map", {center: [36, 138.75], zoom: 5}/*{center: [0, 0], zoom: 2}*/);
 
+  L.hash(map);
+
   L.control.scale().addTo(map);
 
   var geocoder = L.Control.Geocoder.nominatim({
@@ -168,10 +170,10 @@ window.addEventListener("DOMContentLoaded", function (event) {
   });
   L.Control.geocoder({geocoder: geocoder}).addTo(map);
 
+  L.control.gps().addTo(map);
+
   L.Control.layerTreeControl(baseLayers, overlayLayers).addTo(map);
   baseLayers["Open Street Maps\\OSM mapnik"].addTo(map);
-
-  L.control.gps().addTo(map);
 
 }, false);
 
