@@ -17,6 +17,54 @@ window.addEventListener("DOMContentLoaded", function (event) {
     "Open Street Maps\\Landscape": L.tileLayer("https://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png", {
       attribution: osmAttribution + ' Tiles Courtesy of <a href="http://www.thunderforest.com/" target="_blank">Andy Allan</a>'
     }),
+    'Esri\\Topographic': L.tileLayer('http://{s}.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+      'attribution': 'Tiles &copy; <a href="https://static.arcgis.com/attribution/World_Topo_Map" target="_blank">Esri</a>',
+      'maxZoom': 19,
+      'minZoom': 1,
+      'subdomains': ['server', 'services']
+    }),
+    'Esri\\Streets': L.tileLayer('http://{s}.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+      'attribution': 'Tiles &copy; <a href="https://static.arcgis.com/attribution/World_Street_Map" target="_blank">Esri</a>',
+      'maxZoom': 19,
+      'minZoom': 1,
+      'subdomains': ['server', 'services']
+    }),
+    'Esri\\NationalGeographic': L.tileLayer('http://{s}.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+      'attribution': 'Tiles &copy; Esri',
+      'maxZoom': 16,
+      'minZoom': 1,
+      'subdomains': ['server', 'services']
+    }),
+    'Esri\\Oceans': L.tileLayer('http://{s}.arcgisonline.com/arcgis/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}', {
+      'attribution': 'Tiles &copy; <a href="https://static.arcgis.com/attribution/Ocean_Basemap" target="_blank">Esri</a>',
+      'maxZoom': 16,
+      'minZoom': 1,
+      'subdomains': ['server', 'services']
+    }),
+    'Esri\\Gray': L.tileLayer('http://{s}.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+      'attribution': 'Tiles &copy; Esri, NAVTEQ, DeLorme',
+      'maxZoom': 16,
+      'minZoom': 1,
+      'subdomains': ['server', 'services']
+    }),
+    'Esri\\DarkGray': L.tileLayer('http://{s}.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+      'attribution': 'Tiles &copy; Esri, DeLorme, HERE',
+      'maxZoom': 16,
+      'minZoom': 1,
+      'subdomains': ['server', 'services']
+    }),
+    'Esri\\Imagery': L.tileLayer('http://{s}.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      'attribution': 'Tiles &copy; Esri, DigitalGlobe, GeoEye, i-cubed, USDA, USGS, AEX, Getmapping, Aerogrid, IGN, IGP, swisstopo, and the GIS User Community',
+      'maxZoom': 19,
+      'minZoom': 1,
+      'subdomains': ['server', 'services']
+    }),
+    'Esri\\ShadedRelief': L.tileLayer('http://{s}.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', {
+      'attribution': 'Tiles &copy; ESRI, NAVTEQ, DeLorme',
+      'maxZoom': 13,
+      'minZoom': 1,
+      'subdomains': ['server', 'services']
+    }),
     "Google Maps\\RoadMap": new L.Google("ROADMAP"),
     "Google Maps\\Satellite": new L.Google("SATELLITE"),
     "Google Maps\\Terrain": new L.Google("TERRAIN"),
@@ -158,6 +206,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
       attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }), 
   }
+window.___ = baseLayers;
 
   var map = L.map("map", {center: [36, 138.75], zoom: 5}/*{center: [0, 0], zoom: 2}*/);
 
