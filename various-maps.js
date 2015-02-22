@@ -65,6 +65,18 @@ window.addEventListener("DOMContentLoaded", function (event) {
       'minZoom': 1,
       'subdomains': ['server', 'services']
     }),
+    'Bing\\Road': L.tileLayer.quad("https://ecn.t{s}.tiles.virtualearth.net/tiles/r{q}?g=1236", {
+      attribution: "Tiles <a target=\"_blank\" href=\"http://www.bing.com/maps\">Bing</a> &copy; Microsoft and suppliers",
+      subdomains: "01234567"
+    }),
+    'Bing\\Aerial': L.tileLayer.quad("https://ecn.t{s}.tiles.virtualearth.net/tiles/a{q}?g=1236", {
+      attribution: "Tiles <a target=\"_blank\" href=\"http://www.bing.com/maps\">Bing</a> &copy; Microsoft and suppliers",
+      subdomains: "01234567"
+    }),
+    'Bing\\Hybrid': L.tileLayer.quad("https://ecn.t{s}.tiles.virtualearth.net/tiles/h{q}?g=1236", {
+      attribution: "Tiles <a target=\"_blank\" href=\"http://www.bing.com/maps\">Bing</a> &copy; Microsoft and suppliers",
+      subdomains: "01234567"
+    }),
     "Google Maps\\RoadMap": new L.Google("ROADMAP"),
     "Google Maps\\Satellite": new L.Google("SATELLITE"),
     "Google Maps\\Terrain": new L.Google("TERRAIN"),
@@ -165,6 +177,18 @@ window.addEventListener("DOMContentLoaded", function (event) {
   };
   
   var overlayLayers = {
+    'Esri\\World Boundaries and Places': L.tileLayer('https://{s}.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
+      'attribution': 'Tiles &copy; Esri',
+      'maxZoom': 19,
+      'minZoom': 1,
+      'subdomains': ['server', 'services']
+    }),
+    'Esri\\World Transportation': L.tileLayer('https://{s}.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}', {
+      'attribution': 'Tiles &copy; Esri',
+      'maxZoom': 19,
+      'minZoom': 1,
+      'subdomains': ['server', 'services']
+    }),
     "農研機構\\基板地図25000": L.tileLayer("http://www.finds.jp/ws/tmc/1.0.0/KBN25000BBB-900913/{z}/{x}/{y}.png", {
       tms: true,
       maxZoom: 18,
