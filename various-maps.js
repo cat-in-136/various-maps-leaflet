@@ -275,6 +275,28 @@ window.addEventListener("DOMContentLoaded", function (event) {
 
   var map = L.map("map", {center: [36, 138.75], zoom: 5}/*{center: [0, 0], zoom: 2}*/);
 
+  if (location.search) {
+    var pairs = location.search.substring(1).split("&").map(function(pair) {
+      return pair.split("=", 2).map(function(v) { return decodeURIComponent(v); });
+    });
+    for (var i = 0; i < pairs.length; i++) {
+      if (pairs[i][0] == "geojson") {
+        (function (geojsonurl) {
+          var xhr = new XMLHttpRequest();
+          xhr.overrideMimeType('text/json');
+          xhr.open("GET", geojsonurl, true);
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4) {
+              var geojsonFeature = JSON.parse(xhr.responseText);
+              L.geoJson(geojsonFeature).addTo(map);
+            }
+          };
+          xhr.send(null);
+        })(pairs[i][1]);
+      }
+    }
+  }
+
   L.hash(map);
 
   L.control.scale().addTo(map);
