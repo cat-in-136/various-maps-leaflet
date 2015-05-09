@@ -79,6 +79,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
     }),
     "Google Maps\\RoadMap": new L.Google("ROADMAP"),
     "Google Maps\\Satellite": new L.Google("SATELLITE"),
+    "Google Maps\\Hybrid": new L.Google("HYBRID"),
     "Google Maps\\Terrain": new L.Google("TERRAIN"),
     "ISCGM\\Global Elevation": L.tileLayer("http://www.iscgm.org/tiles/global/el/v2/{z}/{x}/{y}.png", {
       maxZoom: 10,
