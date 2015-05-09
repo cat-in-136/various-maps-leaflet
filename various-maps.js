@@ -81,6 +81,15 @@ window.addEventListener("DOMContentLoaded", function (event) {
     "Google Maps\\Satellite": new L.Google("SATELLITE"),
     "Google Maps\\Hybrid": new L.Google("HYBRID"),
     "Google Maps\\Terrain": new L.Google("TERRAIN"),
+    "Google Maps\\Traffic": (new L.Google("ROADMAP")).addOneTimeEventListener("MapObjectInitialized", function (event) {
+      (new google.maps.TrafficLayer()).setMap(event.mapObject);
+    }, false),
+    "Google Maps\\Transit": (new L.Google("ROADMAP")).addOneTimeEventListener("MapObjectInitialized", function (event) {
+      (new google.maps.TransitLayer()).setMap(event.mapObject);
+    }, false),
+    "Google Maps\\Bicycling": (new L.Google("ROADMAP")).addOneTimeEventListener("MapObjectInitialized", function (event) {
+      (new google.maps.BicyclingLayer()).setMap(event.mapObject);
+    }, false),
     "ISCGM\\Global Elevation": L.tileLayer("http://www.iscgm.org/tiles/global/el/v2/{z}/{x}/{y}.png", {
       maxZoom: 10,
       attribution: "<a href='http://www.iscgm.org/' target='_blank'>ISCGM</a>"
@@ -272,6 +281,31 @@ window.addEventListener("DOMContentLoaded", function (event) {
       minZoom: 0,
       maxZoom: 20
     }), 
+    "OpenWeatherMap\\Clouds": L.tileLayer("http://{s}.tile.openweathermap.org/map/clouds/{z}/{x}/{y}.png", {
+      attribution: '<a href="http://www.openstreetmap.org/copyright" target="_blank">OpenWeatherMap</a>',
+      opacity: 0.7,
+      maxZoom: 18
+    }),
+    "OpenWeatherMap\\Precipitation": L.tileLayer("http://{s}.tile.openweathermap.org/map/precipitation/{z}/{x}/{y}.png", {
+      attribution: '<a href="http://www.openstreetmap.org/copyright" target="_blank">OpenWeatherMap</a>',
+      opacity: 0.7,
+      maxZoom: 18
+    }),
+    "OpenWeatherMap\\Sea level pressure": L.tileLayer("http://{s}.tile.openweathermap.org/map/pressure/{z}/{x}/{y}.png", {
+      attribution: '<a href="http://www.openstreetmap.org/copyright" target="_blank">OpenWeatherMap</a>',
+      opacity: 0.7,
+      maxZoom: 18
+    }),
+    "OpenWeatherMap\\Wind speed": L.tileLayer("http://{s}.tile.openweathermap.org/map/wind/{z}/{x}/{y}.png", {
+      attribution: '<a href="http://www.openstreetmap.org/copyright" target="_blank">OpenWeatherMap</a>',
+      opacity: 0.7,
+      maxZoom: 18
+    }),
+    "OpenWeatherMap\\Temperature": L.tileLayer("http://{s}.tile.openweathermap.org/map/temp/{z}/{x}/{y}.png", {
+      attribution: '<a href="http://www.openstreetmap.org/copyright" target="_blank">OpenWeatherMap</a>',
+      opacity: 0.7,
+      maxZoom: 18
+    }),
   }
 
   var map = L.map("map", {center: [36, 138.75], zoom: 5}/*{center: [0, 0], zoom: 2}*/);
