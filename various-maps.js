@@ -4,6 +4,18 @@
 window.addEventListener("DOMContentLoaded", function (event) {
 
   var osmAttribution = "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors.";
+  var kjmapopt = {
+    tms: true,
+    maxNativeZoom: 16,
+    minZoom: 8,
+    attribution: 'この地図は、時系列地形図閲覧サイト「<a href="http://ktgis.net/kjmapw/index.html" target="_blank">今昔マップ on the web</a>」（(C)谷　謙二）により作成したものです。'
+  };
+  var kjmapopt_tohoku_kanto = {
+    tms: true,
+    maxNativeZoom: 15,
+    minZoom: 8,
+    attribution: 'この地図は、時系列地形図閲覧サイト「<a href="http://ktgis.net/kjmapw/index.html" target="_blank">今昔マップ on the web</a>」（(C)谷　謙二）により作成したものです。'
+  };
   var baseLayers = {
     "Open Street Maps\\OSM mapnik": L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: osmAttribution
@@ -160,6 +172,64 @@ window.addEventListener("DOMContentLoaded", function (event) {
       maxZoom: 17,
       attribution: '<a href="http://www.finds.jp/wsdocs/hawms/" target="_blank">歴史的農業環境WMS配信サービス</a>'
     }), 
+    "今昔マップ on the web\\首都圏編\\1896-1909年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tokyo50/2man/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\首都圏編\\1917-1924年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tokyo50/00/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\首都圏編\\1927-1939年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tokyo50/01/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\首都圏編\\1944-1954年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tokyo50/02/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\首都圏編\\1965-1968年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tokyo50/03/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\首都圏編\\1975-1978年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tokyo50/04/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\首都圏編\\1983-1987年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tokyo50/05/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\首都圏編\\1992-1995年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tokyo50/06/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\首都圏編\\1998-2005年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tokyo50/07/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\中京圏編\\1888-1898年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/chukyo/2man/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\中京圏編\\1920年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/chukyo/00/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\中京圏編\\1932年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/chukyo/01/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\中京圏編\\1937-1938年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/chukyo/02/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\中京圏編\\1947年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/chukyo/03/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\中京圏編\\1959-1960年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/chukyo/04/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\中京圏編\\1968-1973年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/chukyo/05/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\中京圏編\\1976-1980年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/chukyo/06/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\中京圏編\\1984-1989年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/chukyo/07/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\中京圏編\\1992-1996年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/chukyo/08/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\京阪神圏編\\1892-1910年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/keihansin/2man/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\京阪神圏編\\1922-1923年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/keihansin/00/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\京阪神圏編\\1927-1935年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/keihansin/01/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\京阪神圏編\\1947-1950年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/keihansin/02/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\京阪神圏編\\1954-1956年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/keihansin/03/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\京阪神圏編\\1961-1964年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/keihansin/03x/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\京阪神圏編\\1967-1970年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/keihansin/04/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\京阪神圏編\\1975-1979年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/keihansin/05/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\京阪神圏編\\1983-1988年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/keihansin/06/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\京阪神圏編\\1993-1997年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/keihansin/07/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\札幌編\\1916年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/sapporo/00/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\札幌編\\1935年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/sapporo/01/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\札幌編\\1950-1952年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/sapporo/02/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\札幌編\\1975-1976年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/sapporo/03/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\札幌編\\1995-1998年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/sapporo/04/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\仙台編\\1928-1933年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/sendai/00/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\仙台編\\1946年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/sendai/01/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\仙台編\\1963-1967年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/sendai/02/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\仙台編\\1977-1978年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/sendai/03/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\仙台編\\1995-2000年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/sendai/04/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\広島編\\1925-1932年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/hiroshima/00/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\広島編\\1950年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/hiroshima/01/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\広島編\\1967-1969年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/hiroshima/02/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\広島編\\1987年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/hiroshima/03/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\広島編\\1992-2000年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/hiroshima/04/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\福岡・北九州編\\1922-1926年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/fukuoka/00/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\福岡・北九州編\\1936-1938年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/fukuoka/01/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\福岡・北九州編\\1948-1956年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/fukuoka/02/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\福岡・北九州編\\1967-1972年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/fukuoka/03/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\福岡・北九州編\\1982-1986年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/fukuoka/04/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\福岡・北九州編\\1991-2000年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/fukuoka/05/{z}/{x}/{y}.png", kjmapopt),
+    "今昔マップ on the web\\東北地方太平洋岸編\\1901-1913年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tohoku_pacific_coast/00/{z}/{x}/{y}.png", kjmapopt_tohoku_kanto),
+    "今昔マップ on the web\\東北地方太平洋岸編\\1949-1953年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tohoku_pacific_coast/01/{z}/{x}/{y}.png", kjmapopt_tohoku_kanto),
+    "今昔マップ on the web\\東北地方太平洋岸編\\1969-1982年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tohoku_pacific_coast/02/{z}/{x}/{y}.png", kjmapopt_tohoku_kanto),
+    "今昔マップ on the web\\東北地方太平洋岸編\\1990-2008年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tohoku_pacific_coast/03/{z}/{x}/{y}.png", kjmapopt_tohoku_kanto),
+    "今昔マップ on the web\\関東編\\1894-1915年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/kanto/00/{z}/{x}/{y}.png", kjmapopt_tohoku_kanto),
+    "今昔マップ on the web\\関東編\\1928-1945年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/kanto/01/{z}/{x}/{y}.png", kjmapopt_tohoku_kanto),
+    "今昔マップ on the web\\関東編\\1972-1982年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/kanto/02/{z}/{x}/{y}.png", kjmapopt_tohoku_kanto),
+    "今昔マップ on the web\\関東編\\1988-2008年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/kanto/03/{z}/{x}/{y}.png", kjmapopt_tohoku_kanto),
     "Stamen\\Toner": L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {
       attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       subdomains: 'abcd',
