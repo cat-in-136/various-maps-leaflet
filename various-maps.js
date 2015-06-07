@@ -18,6 +18,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
   };
   var baseLayers = {
     "Open Street Maps\\OSM mapnik": L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      'maxZoom': 19,
       attribution: osmAttribution
     }),
     "Open Street Maps\\OpenCycleMap": L.tileLayer("https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png", {
@@ -79,19 +80,22 @@ window.addEventListener("DOMContentLoaded", function (event) {
     }),
     'Bing\\Road': L.tileLayer.quad("https://ecn.t{s}.tiles.virtualearth.net/tiles/r{q}?g=1236", {
       attribution: "Tiles <a target=\"_blank\" href=\"http://www.bing.com/maps\">Bing</a> &copy; Microsoft and suppliers",
+      maxZoom: 19,
       subdomains: "01234567"
     }),
     'Bing\\Aerial': L.tileLayer.quad("https://ecn.t{s}.tiles.virtualearth.net/tiles/a{q}?g=1236", {
       attribution: "Tiles <a target=\"_blank\" href=\"http://www.bing.com/maps\">Bing</a> &copy; Microsoft and suppliers",
+      maxZoom: 19,
       subdomains: "01234567"
     }),
     'Bing\\Hybrid': L.tileLayer.quad("https://ecn.t{s}.tiles.virtualearth.net/tiles/h{q}?g=1236", {
       attribution: "Tiles <a target=\"_blank\" href=\"http://www.bing.com/maps\">Bing</a> &copy; Microsoft and suppliers",
+      maxZoom: 19,
       subdomains: "01234567"
     }),
-    "Google Maps\\RoadMap": new L.Google("ROADMAP"),
-    "Google Maps\\Satellite": new L.Google("SATELLITE"),
-    "Google Maps\\Hybrid": new L.Google("HYBRID"),
+    "Google Maps\\RoadMap": new L.Google("ROADMAP", {maxZoom: 20}),
+    "Google Maps\\Satellite": new L.Google("SATELLITE", {maxZoom: 20}),
+    "Google Maps\\Hybrid": new L.Google("HYBRID", {maxZoom: 20}),
     "Google Maps\\Terrain": new L.Google("TERRAIN"),
     "Google Maps\\Traffic": (new L.Google("ROADMAP")).addOneTimeEventListener("MapObjectInitialized", function (event) {
       (new google.maps.TrafficLayer()).setMap(event.mapObject);
@@ -135,22 +139,27 @@ window.addEventListener("DOMContentLoaded", function (event) {
     "地理院地図\\オルソ画像\\最新（2007年～）": L.tileLayer("http://{s}.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg", {
       subdomains : [ 'cyberjapandata-t1', 'cyberjapandata-t2', 'cyberjapandata-t3' ],
       minZoom: 10,
+      maxNativeZoom: 17,
       attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
     "地理院地図\\オルソ画像\\1988年～1990年": L.tileLayer("http://cyberjapandata.gsi.go.jp/xyz/gazo4/{z}/{x}/{y}.jpg", {
       minZoom: 10,
+      maxNativeZoom: 17,
       attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
     "地理院地図\\オルソ画像\\1984年～1987年": L.tileLayer("http://cyberjapandata.gsi.go.jp/xyz/gazo3/{z}/{x}/{y}.jpg", {
       minZoom: 10,
+      maxNativeZoom: 17,
       attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
     "地理院地図\\オルソ画像\\1979年～1983年": L.tileLayer("http://cyberjapandata.gsi.go.jp/xyz/gazo2/{z}/{x}/{y}.jpg", {
       minZoom: 10,
+      maxNativeZoom: 17,
       attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
     "地理院地図\\オルソ画像\\1974年～1978年": L.tileLayer("http://cyberjapandata.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg", {
       minZoom: 10,
+      maxNativeZoom: 17,
       attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
     "地理院地図\\色別標高図": L.tileLayer("http://cyberjapandata.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png", {
