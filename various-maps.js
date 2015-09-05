@@ -162,6 +162,16 @@ window.addEventListener("DOMContentLoaded", function (event) {
       maxNativeZoom: 17,
       attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
+    "地理院地図\\オルソ画像\\1961年～1964年": L.tileLayer("http://cyberjapandata.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png", {
+      minZoom: 5,
+      maxNativeZoom: 17,
+      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }),
+    "地理院地図\\オルソ画像\\1945年～1950年(米軍)": L.tileLayer("http://cyberjapandata.gsi.go.jp/xyz/ort_USA10/{z}/{x}/{y}.png", {
+      minZoom: 5,
+      maxNativeZoom: 17,
+      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }),
     "地理院地図\\色別標高図": L.tileLayer("http://cyberjapandata.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png", {
       maxNativeZoom: 15,
       attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
