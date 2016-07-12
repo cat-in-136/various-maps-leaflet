@@ -396,6 +396,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
       maxZoom: 18
     }),
   }
+  var defaultBaseLayerId = Object.keys(baseLayers)[0];
 
   var map = L.map("map", {center: [36, 138.75], zoom: 5}/*{center: [0, 0], zoom: 2}*/);
 
@@ -417,6 +418,10 @@ window.addEventListener("DOMContentLoaded", function (event) {
           };
           xhr.send(null);
         })(pairs[i][1]);
+      } else if (pairs[i][0] == "base") {
+        if (pairs[i][1] in baseLayers) {
+          defaultBaseLayerId = pairs[i][1];
+        }
       }
     }
   }
@@ -433,7 +438,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
   L.control.gps().addTo(map);
 
   L.Control.layerTreeControl(baseLayers, overlayLayers).addTo(map);
-  baseLayers["Open Street Maps\\OSM mapnik"].addTo(map);
+  baseLayers[defaultBaseLayerId].addTo(map);
 
 }, false);
 
