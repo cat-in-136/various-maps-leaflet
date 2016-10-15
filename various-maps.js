@@ -179,17 +179,17 @@ window.addEventListener("DOMContentLoaded", function (event) {
     "農研機構\\歴史的農業環境\\迅速測図（関東平野、1980年代）": L.tileLayer("http://www.finds.jp/ws/tms/1.0.0/Kanto_Rapid-900913/{z}/{x}/{y}.png", {
       tms: true,
       maxZoom: 17,
-      attribution: '<a href="http://www.finds.jp/wsdocs/hawms/" target="_blank">歴史的農業環境WMS配信サービス</a>'
+      attribution: '国土地理院発行 基盤地図情報を使用した<a href="http://www.finds.jp/mapprv/index.html">地図画像配信サービス</a> (農研機構)を使用'
     }), 
     "農研機構\\歴史的農業環境\\東京五千分の一（1883年）": L.tileLayer("http://www.finds.jp/ws/tms/1.0.0/Tokyo5000-900913/{z}/{x}/{y}.png", {
       tms: true,
       maxZoom: 18,
-      attribution: '<a href="http://www.finds.jp/wsdocs/hawms/" target="_blank">歴史的農業環境WMS配信サービス</a>'
+      attribution: '国土地理院発行 基盤地図情報を使用した<a href="http://www.finds.jp/mapprv/index.html">地図画像配信サービス</a> (農研機構)を使用'
     }), 
     "農研機構\\歴史的農業環境\\2万分の1正式図（福山、1899年）": L.tileLayer("http://www.finds.jp/ws/tmc/1.0.0/Fukuyama_1899-900913/{z}/{x}/{y}.png", {
       tms: true,
       maxZoom: 17,
-      attribution: '<a href="http://www.finds.jp/wsdocs/hawms/" target="_blank">歴史的農業環境WMS配信サービス</a>'
+      attribution: '国土地理院発行 基盤地図情報を使用した<a href="http://www.finds.jp/mapprv/index.html">地図画像配信サービス</a> (農研機構)を使用'
     }), 
     "今昔マップ on the web\\首都圏編\\1896-1909年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tokyo50/2man/{z}/{x}/{y}.png", kjmapopt),
     "今昔マップ on the web\\首都圏編\\1917-1924年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tokyo50/00/{z}/{x}/{y}.png", kjmapopt),
@@ -277,12 +277,6 @@ window.addEventListener("DOMContentLoaded", function (event) {
       subdomains: 'abcd',
       minZoom: 0,
       maxZoom: 20
-    }), 
-    "Stamen\\Watercolor": L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      subdomains: 'abcd',
-      minZoom: 1,
-      maxZoom: 16
     }), 
   };
   
