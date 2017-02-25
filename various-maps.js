@@ -402,6 +402,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
     }),
   }
   var defaultBaseLayerId = Object.keys(baseLayers)[0];
+  var defaultOverlayLayerIds = [];
 
   var map = L.map("map", {center: [36, 138.75], zoom: 5}/*{center: [0, 0], zoom: 2}*/);
 
@@ -427,6 +428,10 @@ window.addEventListener("DOMContentLoaded", function (event) {
         if (pairs[i][1] in baseLayers) {
           defaultBaseLayerId = pairs[i][1];
         }
+      } else if (pairs[i][0] == "overlay") {
+        if (pairs[i][1] in overlayLayers) {
+          defaultOverlayLayerIds.push(pairs[i][1]);
+        }
       }
     }
   }
@@ -444,6 +449,9 @@ window.addEventListener("DOMContentLoaded", function (event) {
 
   L.Control.layerTreeControl(baseLayers, overlayLayers).addTo(map);
   baseLayers[defaultBaseLayerId].addTo(map);
+  for (var i = 0; i < defaultOverlayLayerIds.length; i++) {
+    overlayLayers[defaultOverlayLayerIds[i]].addTo(map);
+  }
 
 }, false);
 
