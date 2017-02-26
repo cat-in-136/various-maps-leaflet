@@ -176,7 +176,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
       maxNativeZoom: 15,
       attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
-    "農研機構\\歴史的農業環境\\迅速測図（関東平野、1980年代）": L.tileLayer("http://www.finds.jp/ws/tms/1.0.0/Kanto_Rapid-900913/{z}/{x}/{y}.png", {
+    "農研機構\\歴史的農業環境\\迅速測図（関東平野、1880年代）": L.tileLayer("http://www.finds.jp/ws/tms/1.0.0/Kanto_Rapid-900913/{z}/{x}/{y}.png", {
       tms: true,
       maxZoom: 17,
       attribution: '国土地理院発行 基盤地図情報を使用した<a href="http://www.finds.jp/mapprv/index.html">地図画像配信サービス</a> (農研機構)を使用'
