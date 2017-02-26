@@ -313,6 +313,11 @@ window.addEventListener("DOMContentLoaded", function (event) {
       maxZoom: 16,
       attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }), 
+    "地理院地図\\都市圏活断層図": L.tileLayer("http://cyberjapandata.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png", {
+      minZoom: 2,
+      maxZoom: 16,
+      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }),
     "地理院地図\\GSI\\内水域": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/inwatera_jpn/{z}/{x}/{y}.png", {
       maxZoom: 11,
       attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
