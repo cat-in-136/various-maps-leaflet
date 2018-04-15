@@ -34,6 +34,7 @@ L.Control.LayerTreeControl = L.Control.Layers.extend({
       input.name = "leaflet-base-layers";
     }
     input.defaultChecked = checked;
+		this._layerControlInputs.push(input);
     input.layerId = L.stamp(obj.layer);
 
     L.DomEvent.on(input, "click", this._onInputClick, this);

@@ -93,19 +93,10 @@ window.addEventListener("DOMContentLoaded", function (event) {
       maxZoom: 19,
       subdomains: "01234567"
     }),
-    "Google Maps\\RoadMap": new L.Google("ROADMAP", {maxZoom: 20}),
-    "Google Maps\\Satellite": new L.Google("SATELLITE", {maxZoom: 20}),
-    "Google Maps\\Hybrid": new L.Google("HYBRID", {maxZoom: 20}),
-    "Google Maps\\Terrain": new L.Google("TERRAIN"),
-    "Google Maps\\Traffic": (new L.Google("ROADMAP")).addOneTimeEventListener("MapObjectInitialized", function (event) {
-      (new google.maps.TrafficLayer()).setMap(event.mapObject);
-    }, false),
-    "Google Maps\\Transit": (new L.Google("ROADMAP")).addOneTimeEventListener("MapObjectInitialized", function (event) {
-      (new google.maps.TransitLayer()).setMap(event.mapObject);
-    }, false),
-    "Google Maps\\Bicycling": (new L.Google("ROADMAP")).addOneTimeEventListener("MapObjectInitialized", function (event) {
-      (new google.maps.BicyclingLayer()).setMap(event.mapObject);
-    }, false),
+    "Google Maps\\RoadMap": L.gridLayer.googleMutant({type: "roadmap"}),
+    "Google Maps\\Satellite": L.gridLayer.googleMutant({type: "satellite"}),
+    "Google Maps\\Hybrid": L.gridLayer.googleMutant({type: "hybrid"}),
+    "Google Maps\\Terrain": L.gridLayer.googleMutant({type: "terrain"}),
     "ISCGM\\Global Elevation": L.tileLayer("http://www.iscgm.org/tiles/global/el/v2/{z}/{x}/{y}.png", {
       maxZoom: 10,
       attribution: "<a href='http://www.iscgm.org/' target='_blank'>ISCGM</a>"
@@ -409,7 +400,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
   var defaultBaseLayerId = Object.keys(baseLayers)[0];
   var defaultOverlayLayerIds = [];
 
-  var map = L.map("map", {center: [36, 138.75], zoom: 5}/*{center: [0, 0], zoom: 2}*/);
+  var map = L.map("map", {center: [36, 138.75], zoom: 5, zoomControl: false});
 
   if (location.search) {
     var pairs = location.search.substring(1).split("&").map(function(pair) {
@@ -444,13 +435,14 @@ window.addEventListener("DOMContentLoaded", function (event) {
   L.hash(map);
 
   L.control.scale().addTo(map);
+  map.addControl(new L.Control.Zoomslider());
 
   var geocoder = L.Control.Geocoder.nominatim({
     serviceUrl: 'https://nominatim.openstreetmap.org/'
   });
   L.Control.geocoder({geocoder: geocoder}).addTo(map);
 
-  L.control.gps().addTo(map);
+  map.addControl(new L.Control.Gps());
 
   L.Control.layerTreeControl(baseLayers, overlayLayers).addTo(map);
   baseLayers[defaultBaseLayerId].addTo(map);
