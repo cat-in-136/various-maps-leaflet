@@ -133,7 +133,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
       maxNativeZoom: 17,
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
-    "地理院地図\\オルソ画像\\1984年～1987年": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/gazo3/{z}/{x}/{y}.jpg", {
+    "地理院地図\\オルソ画像\\1984年～1986年": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/gazo3/{z}/{x}/{y}.jpg", {
       minZoom: 10,
       maxNativeZoom: 17,
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
@@ -148,7 +148,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
       maxNativeZoom: 17,
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
-    "地理院地図\\オルソ画像\\1961年～1964年": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png", {
+    "地理院地図\\オルソ画像\\1961年～1969年": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png", {
       minZoom: 5,
       maxNativeZoom: 17,
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
@@ -164,8 +164,9 @@ window.addEventListener("DOMContentLoaded", function (event) {
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
     "地理院地図\\色別標高図": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png", {
+      minZoom: 5,
       maxNativeZoom: 15,
-      attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+      attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院、海域部は海上保安庁海洋情報部の資料を使用して作成</a>'
     }),
     "農研機構\\歴史的農業環境\\迅速測図（関東平野、1880年代）": L.tileLayer("http://www.finds.jp/ws/tms/1.0.0/Kanto_Rapid-900913/{z}/{x}/{y}.png", {
       tms: true,
