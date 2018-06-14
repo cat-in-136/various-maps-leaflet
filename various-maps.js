@@ -123,7 +123,12 @@ window.addEventListener("DOMContentLoaded", function (event) {
       maxNativeZoom: 11,
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
-    "地理院地図\\オルソ画像\\最新（2007年～）": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg", {
+    "地理院地図\\オルソ画像\\全国最新写真": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg", {
+      minZoom: 2,
+      maxNativeZoom: 18,
+      attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>, Landsat8(GSI,TSIC,GEO Grid/AIST), Landsat8(courtesy of the U.S. Geological Survey), 海底地形(GEBCO), Images on 世界衛星モザイク画像 obtained from site <a href="https://lpdaac.usgs.gov/data_access">https://lpdaac.usgs.gov/data_access</a> maintained by the NASA Land Processes Distributed Active Archive Center (LP DAAC), USGS/Earth Resources Observation and Science (EROS) Center, Sioux Falls, South Dakota, (Year). Source of image data product.'
+    }),
+    "地理院地図\\オルソ画像\\2007年～": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg", {
       minZoom: 10,
       maxNativeZoom: 17,
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
