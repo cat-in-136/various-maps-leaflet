@@ -93,10 +93,6 @@ window.addEventListener("DOMContentLoaded", function (event) {
       maxZoom: 19,
       subdomains: "01234567"
     }),
-    "Google Maps\\RoadMap": L.gridLayer.googleMutant({type: "roadmap"}),
-    "Google Maps\\Satellite": L.gridLayer.googleMutant({type: "satellite"}),
-    "Google Maps\\Hybrid": L.gridLayer.googleMutant({type: "hybrid"}),
-    "Google Maps\\Terrain": L.gridLayer.googleMutant({type: "terrain"}),
     "ISCGM\\Global Elevation": L.tileLayer("http://www.iscgm.org/tiles/global/el/v2/{z}/{x}/{y}.png", {
       maxZoom: 10,
       attribution: "<a href='http://www.iscgm.org/' target='_blank'>ISCGM</a>"
