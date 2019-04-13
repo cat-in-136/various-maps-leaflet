@@ -450,6 +450,8 @@ window.addEventListener("DOMContentLoaded", function (event) {
     overlayLayers[defaultOverlayLayerIds[i]].addTo(map);
   }
 
+  map.addControl(new L.Control.LinkToGeoHack());
+
 }, false);
 
 })();

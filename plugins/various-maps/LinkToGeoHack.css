@@ -1,0 +1,11 @@
+.leaflet-control-link-to-geohack {
+  background-color: white;
+  width: 32px;
+  height: 32px;
+}
+.leaflet-control-link-to-geohack-button {
+  background-image: url(images/LinkToGeoHack-geohack-icon.svg);
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+}
