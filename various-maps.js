@@ -437,9 +437,7 @@ window.addEventListener("DOMContentLoaded", function (event) {
   L.control.scale().addTo(map);
   map.addControl(new L.Control.Zoomslider());
 
-  var geocoder = L.Control.Geocoder.nominatim({
-    serviceUrl: 'https://nominatim.openstreetmap.org/'
-  });
+  var geocoder = L.Control.Geocoder.nominatim();
   L.Control.geocoder({geocoder: geocoder}).addTo(map);
 
   map.addControl(new L.Control.Gps());
