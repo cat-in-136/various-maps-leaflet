@@ -3,7 +3,7 @@
 
 window.addEventListener("DOMContentLoaded", function (event) {
 
-  var osmAttribution = "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors.";
+  var osmAttribution = "Map data &copy; <a href=\"https://www.openstreetmap.org\">OpenStreetMap</a> contributors.";
   var kjmapopt = {
     tms: true,
     maxNativeZoom: 16,
@@ -22,84 +22,76 @@ window.addEventListener("DOMContentLoaded", function (event) {
       attribution: osmAttribution
     }),
     "Open Street Maps\\OpenCycleMap": L.tileLayer("https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png", {
-      attribution: osmAttribution + ' Tiles Courtesy of <a href="http://www.thunderforest.com/" target="_blank">Andy Allan</a>'
+      attribution: osmAttribution + ' Tiles Courtesy of <a href="https://www.thunderforest.com/" target="_blank">Andy Allan</a>'
     }),
     "Open Street Maps\\Transport": L.tileLayer("https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png", {
-      attribution: osmAttribution + ' Tiles Courtesy of <a href="http://www.thunderforest.com/" target="_blank">Andy Allan</a>'
+      attribution: osmAttribution + ' Tiles Courtesy of <a href="https://www.thunderforest.com/" target="_blank">Andy Allan</a>'
     }),
     "Open Street Maps\\Landscape": L.tileLayer("https://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png", {
-      attribution: osmAttribution + ' Tiles Courtesy of <a href="http://www.thunderforest.com/" target="_blank">Andy Allan</a>'
+      attribution: osmAttribution + ' Tiles Courtesy of <a href="https://www.thunderforest.com/" target="_blank">Andy Allan</a>'
     }),
-    'Esri\\Topographic': L.tileLayer('http://{s}.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+    'Esri\\Topographic': L.tileLayer('https://{s}.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
       'attribution': 'Tiles &copy; <a href="https://static.arcgis.com/attribution/World_Topo_Map" target="_blank">Esri</a>',
       'maxZoom': 19,
       'minZoom': 1,
       'subdomains': ['server', 'services']
     }),
-    'Esri\\Streets': L.tileLayer('http://{s}.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+    'Esri\\Streets': L.tileLayer('https://{s}.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
       'attribution': 'Tiles &copy; <a href="https://static.arcgis.com/attribution/World_Street_Map" target="_blank">Esri</a>',
       'maxZoom': 19,
       'minZoom': 1,
       'subdomains': ['server', 'services']
     }),
-    'Esri\\NationalGeographic': L.tileLayer('http://{s}.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+    'Esri\\NationalGeographic': L.tileLayer('https://{s}.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
       'attribution': 'Tiles &copy; Esri',
       'maxZoom': 16,
       'minZoom': 1,
       'subdomains': ['server', 'services']
     }),
-    'Esri\\Oceans': L.tileLayer('http://{s}.arcgisonline.com/arcgis/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}', {
+    'Esri\\Oceans': L.tileLayer('https://{s}.arcgisonline.com/arcgis/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}', {
       'attribution': 'Tiles &copy; <a href="https://static.arcgis.com/attribution/Ocean_Basemap" target="_blank">Esri</a>',
       'maxZoom': 16,
       'minZoom': 1,
       'subdomains': ['server', 'services']
     }),
-    'Esri\\Gray': L.tileLayer('http://{s}.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+    'Esri\\Gray': L.tileLayer('https://{s}.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
       'attribution': 'Tiles &copy; Esri, NAVTEQ, DeLorme',
       'maxZoom': 16,
       'minZoom': 1,
       'subdomains': ['server', 'services']
     }),
-    'Esri\\DarkGray': L.tileLayer('http://{s}.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+    'Esri\\DarkGray': L.tileLayer('https://{s}.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
       'attribution': 'Tiles &copy; Esri, DeLorme, HERE',
       'maxZoom': 16,
       'minZoom': 1,
       'subdomains': ['server', 'services']
     }),
-    'Esri\\Imagery': L.tileLayer('http://{s}.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    'Esri\\Imagery': L.tileLayer('https://{s}.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
       'attribution': 'Tiles &copy; Esri, DigitalGlobe, GeoEye, i-cubed, USDA, USGS, AEX, Getmapping, Aerogrid, IGN, IGP, swisstopo, and the GIS User Community',
       'maxZoom': 19,
       'minZoom': 1,
       'subdomains': ['server', 'services']
     }),
-    'Esri\\ShadedRelief': L.tileLayer('http://{s}.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', {
+    'Esri\\ShadedRelief': L.tileLayer('https://{s}.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', {
       'attribution': 'Tiles &copy; ESRI, NAVTEQ, DeLorme',
       'maxZoom': 13,
       'minZoom': 1,
       'subdomains': ['server', 'services']
     }),
     'Bing\\Road': L.tileLayer.quad("https://ecn.t{s}.tiles.virtualearth.net/tiles/r{q}?g=1236", {
-      attribution: "Tiles <a target=\"_blank\" href=\"http://www.bing.com/maps\">Bing</a> &copy; Microsoft and suppliers",
+      attribution: "Tiles <a target=\"_blank\" href=\"https://www.bing.com/maps\">Bing</a> &copy; Microsoft and suppliers",
       maxZoom: 19,
       subdomains: "01234567"
     }),
     'Bing\\Aerial': L.tileLayer.quad("https://ecn.t{s}.tiles.virtualearth.net/tiles/a{q}?g=1236", {
-      attribution: "Tiles <a target=\"_blank\" href=\"http://www.bing.com/maps\">Bing</a> &copy; Microsoft and suppliers",
+      attribution: "Tiles <a target=\"_blank\" href=\"https://www.bing.com/maps\">Bing</a> &copy; Microsoft and suppliers",
       maxZoom: 19,
       subdomains: "01234567"
     }),
     'Bing\\Hybrid': L.tileLayer.quad("https://ecn.t{s}.tiles.virtualearth.net/tiles/h{q}?g=1236", {
-      attribution: "Tiles <a target=\"_blank\" href=\"http://www.bing.com/maps\">Bing</a> &copy; Microsoft and suppliers",
+      attribution: "Tiles <a target=\"_blank\" href=\"https://www.bing.com/maps\">Bing</a> &copy; Microsoft and suppliers",
       maxZoom: 19,
       subdomains: "01234567"
-    }),
-    "ISCGM\\Global Elevation": L.tileLayer("http://www.iscgm.org/tiles/global/el/v2/{z}/{x}/{y}.png", {
-      maxZoom: 10,
-      attribution: "<a href='http://www.iscgm.org/' target='_blank'>ISCGM</a>"
-    }),
-    "ISCGM\\Global Land Cover": L.tileLayer("http://www.iscgm.org/tiles/global/lc/v2/{z}/{x}/{y}.png", {
-      maxZoom: 11,
-      attribution: "<a href='http://www.iscgm.org/' target='_blank'>ISCGM</a>"
     }),
     "地理院地図\\標準地図": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png", {
       minZoom: 2,
@@ -254,25 +246,25 @@ window.addEventListener("DOMContentLoaded", function (event) {
     "今昔マップ on the web\\浜松・豊橋編\\1988-1995年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/hamamatsu/05/{z}/{x}/{y}.png", kjmapopt),
     "今昔マップ on the web\\浜松・豊橋編\\1996-2010年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/hamamatsu/06/{z}/{x}/{y}.png", kjmapopt),
     "Stamen\\Toner": L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      attribution: 'Map tiles by <a href="https://stamen.com">Stamen Design</a>, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       subdomains: 'abcd',
       minZoom: 0,
       maxZoom: 20
     }), 
     "Stamen\\Toner Background": L.tileLayer('http://{s}.tile.stamen.com/toner-background/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      attribution: 'Map tiles by <a href="https://stamen.com">Stamen Design</a>, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       subdomains: 'abcd',
       minZoom: 0,
       maxZoom: 20
     }), 
     "Stamen\\Toner Lite": L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      attribution: 'Map tiles by <a href="https://stamen.com">Stamen Design</a>, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       subdomains: 'abcd',
       minZoom: 0,
       maxZoom: 20
     }), 
     "Stamen\\Terrain": L.tileLayer('http://{s}.tile.stamen.com/terrain/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      attribution: 'Map tiles by <a href="https://stamen.com">Stamen Design</a>, <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       subdomains: 'abcd',
       minZoom: 0,
       maxZoom: 18
@@ -302,108 +294,39 @@ window.addEventListener("DOMContentLoaded", function (event) {
       maxZoom: 18,
       attribution: '<a href="https://aginfo.cgk.affrc.go.jp/wsdocs/pnwms/index.html.ja" target="_blank">地名WMS配信サービス</a>'
     }), 
-    "地理院地図\\土地条件数値地図25000": L.tileLayer("http://cyberjapandata.gsi.go.jp/xyz/LCM25K_2012/{z}/{x}/{y}.png", {
+    "地理院地図\\土地条件数値地図25000": L.tileLayer("https://maps.gsi.go.jp/xyz/LCM25K_2012/{z}/{x}/{y}.png", {
       minZoom: 4,
       maxZoom: 16,
-      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+      attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }), 
-    "地理院地図\\明治前期の低湿地": L.tileLayer("http://cyberjapandata.gsi.go.jp/xyz/swale/{z}/{x}/{y}.png", {
+    "地理院地図\\明治期の低湿地": L.tileLayer("https://maps.gsi.go.jp/xyz/swale/{z}/{x}/{y}.png", {
       minZoom: 5,
       maxZoom: 16,
-      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+      attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }), 
-    "地理院地図\\都市圏活断層図": L.tileLayer("http://cyberjapandata.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png", {
+    "地理院地図\\都市圏活断層図": L.tileLayer("https://maps.gsi.go.jp/xyz/afm/{z}/{x}/{y}.png", {
       minZoom: 2,
       maxZoom: 16,
-      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+      attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
-    "地理院地図\\GSI\\内水域": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/inwatera_jpn/{z}/{x}/{y}.png", {
-      maxZoom: 11,
-      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
-    }), 
-    "地理院地図\\GSI\\航路": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/ferryl_jpn/{z}/{x}/{y}.png", {
-      maxZoom: 11,
-      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
-    }), 
-    "地理院地図\\GSI\\海岸線": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/coastl_jpn/{z}/{x}/{y}.png", {
-      maxZoom: 11,
-      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
-    }), 
-    "地理院地図\\GSI\\行政界": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/polbndl_jpn/{z}/{x}/{y}.png", {
-      maxZoom: 11,
-      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
-    }), 
-    "地理院地図\\GSI\\鉄道": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/rail_jpn/{z}/{x}/{y}.png", {
-      maxZoom: 11,
-      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
-    }), 
-    "地理院地図\\GSI\\河川": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/riverl_jpn/{z}/{x}/{y}.png", {
-      maxZoom: 11,
-      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
-    }), 
-    "地理院地図\\GSI\\道路": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/roadl_jpn/{z}/{x}/{y}.png", {
-      maxZoom: 11,
-      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
-    }), 
-    "地理院地図\\GSI\\駅": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/rstatp_jpn/{z}/{x}/{y}.png", {
-      maxZoom: 11,
-      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
-    }), 
-    "地理院地図\\GSI\\空港": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/airp_jpn/{z}/{x}/{y}.png", {
-      maxZoom: 11,
-      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
-    }), 
-    "地理院地図\\GSI\\港湾": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/port_jpn/{z}/{x}/{y}.png", {
-      maxZoom: 11,
-      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
-    }), 
-    "地理院地図\\GSI\\行政界（地名）": L.tileLayer("http://www1.gsi.go.jp/geowww/globalmap-gsi/tiles/gm_jpn_2/polbnda_jpn/{z}/{x}/{y}.png", {
-      maxZoom: 11,
-      attribution: '<a href="http://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
-    }), 
     "Stamen\\Toner Hybrid": L.tileLayer('http://{s}.tile.stamen.com/toner-hybrid/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       subdomains: 'abcd',
       minZoom: 0,
       maxZoom: 20
     }), 
     "Stamen\\Toner Lines": L.tileLayer('http://{s}.tile.stamen.com/toner-lines/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       subdomains: 'abcd',
       minZoom: 0,
       maxZoom: 20
     }), 
     "Stamen\\Toner Labels": L.tileLayer('http://{s}.tile.stamen.com/toner-labels/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       subdomains: 'abcd',
       minZoom: 0,
       maxZoom: 20
     }), 
-    "OpenWeatherMap\\Clouds": L.tileLayer("http://{s}.tile.openweathermap.org/map/clouds/{z}/{x}/{y}.png", {
-      attribution: '<a href="http://www.openstreetmap.org/copyright" target="_blank">OpenWeatherMap</a>',
-      opacity: 0.7,
-      maxZoom: 18
-    }),
-    "OpenWeatherMap\\Precipitation": L.tileLayer("http://{s}.tile.openweathermap.org/map/precipitation/{z}/{x}/{y}.png", {
-      attribution: '<a href="http://www.openstreetmap.org/copyright" target="_blank">OpenWeatherMap</a>',
-      opacity: 0.7,
-      maxZoom: 18
-    }),
-    "OpenWeatherMap\\Sea level pressure": L.tileLayer("http://{s}.tile.openweathermap.org/map/pressure/{z}/{x}/{y}.png", {
-      attribution: '<a href="http://www.openstreetmap.org/copyright" target="_blank">OpenWeatherMap</a>',
-      opacity: 0.7,
-      maxZoom: 18
-    }),
-    "OpenWeatherMap\\Wind speed": L.tileLayer("http://{s}.tile.openweathermap.org/map/wind/{z}/{x}/{y}.png", {
-      attribution: '<a href="http://www.openstreetmap.org/copyright" target="_blank">OpenWeatherMap</a>',
-      opacity: 0.7,
-      maxZoom: 18
-    }),
-    "OpenWeatherMap\\Temperature": L.tileLayer("http://{s}.tile.openweathermap.org/map/temp/{z}/{x}/{y}.png", {
-      attribution: '<a href="http://www.openstreetmap.org/copyright" target="_blank">OpenWeatherMap</a>',
-      opacity: 0.7,
-      maxZoom: 18
-    }),
   }
   var defaultBaseLayerId = Object.keys(baseLayers)[0];
   var defaultOverlayLayerIds = [];
