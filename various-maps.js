@@ -118,10 +118,10 @@ window.addEventListener("DOMContentLoaded", function (event) {
     }),
     "地理院地図\\オルソ画像\\2007年～": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg", {
       minZoom: 10,
-      maxNativeZoom: 17,
+      maxNativeZoom: 18,
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
-    "地理院地図\\オルソ画像\\1988年～1990年": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/gazo4/{z}/{x}/{y}.jpg", {
+    "地理院地図\\オルソ画像\\1987年～1990年": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/gazo4/{z}/{x}/{y}.jpg", {
       minZoom: 10,
       maxNativeZoom: 17,
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
@@ -142,17 +142,22 @@ window.addEventListener("DOMContentLoaded", function (event) {
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
     "地理院地図\\オルソ画像\\1961年～1969年": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/ort_old10/{z}/{x}/{y}.png", {
-      minZoom: 5,
+      minZoom: 2,
       maxNativeZoom: 17,
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
     "地理院地図\\オルソ画像\\1945年～1950年(米軍)": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/ort_USA10/{z}/{x}/{y}.png", {
-      minZoom: 5,
+      minZoom: 2,
       maxNativeZoom: 17,
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
-    "地理院地図\\オルソ画像\\1936年頃(陸軍)": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/ort_riku10/{z}/{x}/{y}.png", {
-      minZoom: 5,
+    "地理院地図\\オルソ画像\\1936年～1942年頃(陸軍)": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/ort_riku10/{z}/{x}/{y}.png", {
+      minZoom: 2,
+      maxNativeZoom: 18,
+      attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
+    }),
+    "地理院地図\\オルソ画像\\1928年頃": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/ort_1928/{z}/{x}/{y}.png", {
+      minZoom: 2,
       maxNativeZoom: 18,
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
@@ -160,6 +165,11 @@ window.addEventListener("DOMContentLoaded", function (event) {
       minZoom: 5,
       maxNativeZoom: 15,
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院、海域部は海上保安庁海洋情報部の資料を使用して作成</a>'
+    }),
+    "地理院地図\\陰影起伏図": L.tileLayer("https://cyberjapandata.gsi.go.jp/xyz/hillshademap/{z}/{x}/{y}.png", {
+      minZoom: 2,
+      maxNativeZoom: 16,
+      attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
     "農研機構\\歴史的農業環境\\迅速測図（関東平野、1880年代）": L.tileLayer("https://aginfo.cgk.affrc.go.jp/ws/tmc/1.0.0/Kanto_Rapid-900913/{z}/{x}/{y}.png", {
       tms: true,
