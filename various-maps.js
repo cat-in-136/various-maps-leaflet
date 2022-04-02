@@ -3,7 +3,6 @@
 
 window.addEventListener("DOMContentLoaded", function (event) {
 
-  var osmAttribution = "Map data &copy; <a href=\"https://www.openstreetmap.org\">OpenStreetMap</a> contributors.";
   var kjmapopt = {
     tms: true,
     maxNativeZoom: 16,
@@ -18,17 +17,28 @@ window.addEventListener("DOMContentLoaded", function (event) {
   };
   var baseLayers = {
     "Open Street Maps\\OSM mapnik": L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      'maxZoom': 19,
-      attribution: osmAttribution
+      maxZoom: 19,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org">OpenStreetMap</a> contributors.'
     }),
-    "Open Street Maps\\OpenCycleMap": L.tileLayer("https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png", {
-      attribution: osmAttribution + ' Tiles Courtesy of <a href="https://www.thunderforest.com/" target="_blank">Andy Allan</a>'
+    "Open Street Maps\\OSM mapnik DE": L.tileLayer("https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org">OpenStreetMap</a> contributors.'
     }),
-    "Open Street Maps\\Transport": L.tileLayer("https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png", {
-      attribution: osmAttribution + ' Tiles Courtesy of <a href="https://www.thunderforest.com/" target="_blank">Andy Allan</a>'
+    "Open Street Maps\\OSM mapnik FR": L.tileLayer("https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org">OpenStreetMap</a> contributors.'
     }),
-    "Open Street Maps\\Landscape": L.tileLayer("https://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png", {
-      attribution: osmAttribution + ' Tiles Courtesy of <a href="https://www.thunderforest.com/" target="_blank">Andy Allan</a>'
+    "Open Street Maps\\ÖPNVKarte": L.tileLayer("https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png", {
+      maxZoom: 18,
+      attribution: 'Map <a href="https://memomaps.de/">memomaps.de</a> <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.'
+    }),
+    "Open Street Maps\\Open Topo Map": L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
+      maxZoom: 17,
+      attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+    }),
+    "Open Street Maps\\CycIOSM": L.tileLayer("https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png", {
+      maxZoom: 20,
+      attribution: '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }),
     'Esri\\Topographic': L.tileLayer('https://{s}.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
       'attribution': 'Tiles &copy; <a href="https://static.arcgis.com/attribution/World_Topo_Map" target="_blank">Esri</a>',
