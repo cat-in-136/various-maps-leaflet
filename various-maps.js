@@ -261,36 +261,6 @@ window.addEventListener("DOMContentLoaded", function (event) {
     "今昔マップ on the web\\浜松・豊橋編\\1975-1988年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/hamamatsu/04/{z}/{x}/{y}.png", kjmapopt),
     "今昔マップ on the web\\浜松・豊橋編\\1988-1995年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/hamamatsu/05/{z}/{x}/{y}.png", kjmapopt),
     "今昔マップ on the web\\浜松・豊橋編\\1996-2010年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/hamamatsu/06/{z}/{x}/{y}.png", kjmapopt),
-    "Stamen\\Toner": L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="https://stamen.com/">Stamen Design</a>, under <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="https://openstreetmap.org/">OpenStreetMap</a>, under <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
-      subdomains: 'abcd',
-      minZoom: 0,
-      maxZoom: 20
-    }), 
-    "Stamen\\Toner Background": L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="https://stamen.com/">Stamen Design</a>, under <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="https://openstreetmap.org/">OpenStreetMap</a>, under <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
-      subdomains: 'abcd',
-      minZoom: 0,
-      maxZoom: 20
-    }), 
-    "Stamen\\Toner Lite": L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="https://stamen.com/">Stamen Design</a>, under <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="https://openstreetmap.org/">OpenStreetMap</a>, under <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
-      subdomains: 'abcd',
-      minZoom: 0,
-      maxZoom: 20
-    }), 
-    "Stamen\\Terrain": L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="https://stamen.com/">Stamen Design</a>, under <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="https://openstreetmap.org/">OpenStreetMap</a>, under <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
-      subdomains: 'abcd',
-      minZoom: 0,
-      maxZoom: 18
-    }),
-    "Stamen\\Watercolor": L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg', {
-      attribution: 'Map tiles by <a href="https://stamen.com/">Stamen Design</a>, under <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="https://openstreetmap.org/">OpenStreetMap</a>, under <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
-      subdomains: 'abcd',
-      minZoom: 0,
-      maxZoom: 18
-    })
   };
   
   var overlayLayers = {
@@ -331,24 +301,6 @@ window.addEventListener("DOMContentLoaded", function (event) {
       maxZoom: 16,
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
-    "Stamen\\Toner Hybrid": L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="https://stamen.com/">Stamen Design</a>, under <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="https://openstreetmap.org/">OpenStreetMap</a>, under <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
-      subdomains: 'abcd',
-      minZoom: 0,
-      maxZoom: 20
-    }), 
-    "Stamen\\Toner Lines": L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lines/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="https://stamen.com/">Stamen Design</a>, under <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="https://openstreetmap.org/">OpenStreetMap</a>, under <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
-      subdomains: 'abcd',
-      minZoom: 0,
-      maxZoom: 20
-    }), 
-    "Stamen\\Toner Labels": L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-labels/{z}/{x}/{y}.png', {
-      attribution: 'Map tiles by <a href="https://stamen.com/">Stamen Design</a>, under <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="https://openstreetmap.org/">OpenStreetMap</a>, under <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.',
-      subdomains: 'abcd',
-      minZoom: 0,
-      maxZoom: 20
-    }), 
   }
   var defaultBaseLayerId = Object.keys(baseLayers)[0];
   var defaultOverlayLayerIds = [];
