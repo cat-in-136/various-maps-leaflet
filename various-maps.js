@@ -181,21 +181,17 @@ window.addEventListener("DOMContentLoaded", function (event) {
       maxNativeZoom: 16,
       attribution: '<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html" target="_blank">国土地理院</a>'
     }),
-    "農研機構\\歴史的農業環境\\迅速測図（関東平野、1880年代）": L.tileLayer("https://aginfo.cgk.affrc.go.jp/ws/tmc/1.0.0/Kanto_Rapid-900913/{z}/{x}/{y}.png", {
+    "農研機構\\歴史的農業環境\\迅速測図（関東平野、1880年代）": L.tileLayer("https://habs.rad.naro.go.jp/rapid16/{z}/{x}/{y}.png", {
       tms: true,
+      minZoom: 8,
       maxZoom: 17,
-      attribution: '国土地理院発行 基盤地図情報を使用した<a href="https://aginfo.cgk.affrc.go.jp/mapprv/index.html">地図画像配信サービス</a> (農研機構)を使用'
-    }), 
-    "農研機構\\歴史的農業環境\\東京五千分の一（1883年）": L.tileLayer("https://aginfo.cgk.affrc.go.jp/ws/tms/1.0.0/Tokyo5000-900913/{z}/{x}/{y}.png", {
-      tms: true,
+      attribution: '<a target="_blank" href="https://www.naro.go.jp/laboratory/niaes/">農研機構農業環境研究部門</a>'
+    }),
+    "農研機構\\歴史的農業環境\\東京五千分の一（1883年）": L.tileLayer("https://boiledorange73.sakura.ne.jp/ws/tile/Tokyo5000-900913/{z}/{x}/{y}.png", {//"https://habs.rad.naro.go.jp/tokyo5k/{z}/{x}/{y}.png", {
+      minZoom: 8,
       maxZoom: 18,
-      attribution: '国土地理院発行 基盤地図情報を使用した<a href="https://aginfo.cgk.affrc.go.jp/mapprv/index.html">地図画像配信サービス</a> (農研機構)を使用'
-    }), 
-    "農研機構\\歴史的農業環境\\2万分の1正式図（福山、1899年）": L.tileLayer("https://aginfo.cgk.affrc.go.jp/ws/tmc/1.0.0/Fukuyama_1899-900913/{z}/{x}/{y}.png", {
-      tms: true,
-      maxZoom: 17,
-      attribution: '国土地理院発行 基盤地図情報を使用した<a href="https://aginfo.cgk.affrc.go.jp/mapprv/index.html">地図画像配信サービス</a> (農研機構)を使用'
-    }), 
+      attribution: '<a target="_blank" href="https://www.naro.go.jp/laboratory/niaes/">農研機構農業環境研究部門</a>'
+    }),
     "今昔マップ on the web\\首都圏編\\1896-1909年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tokyo50/2man/{z}/{x}/{y}.png", kjmapopt),
     "今昔マップ on the web\\首都圏編\\1917-1924年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tokyo50/00/{z}/{x}/{y}.png", kjmapopt),
     "今昔マップ on the web\\首都圏編\\1927-1939年": L.tileLayer("http://ktgis.net/kjmapw/kjtilemap/tokyo50/01/{z}/{x}/{y}.png", kjmapopt),
@@ -310,16 +306,16 @@ window.addEventListener("DOMContentLoaded", function (event) {
       'minZoom': 1,
       'subdomains': ['server', 'services']
     }),
-    "農研機構\\基板地図25000": L.tileLayer("https://aginfo.cgk.affrc.go.jp/ws/tmc/1.0.0/KBN25000BBB-900913/{z}/{x}/{y}.png", {
-      tms: true,
-      maxZoom: 18,
-      attribution: '<a href="https://aginfo.cgk.affrc.go.jp/wsdocs/kibanwms/index.html.ja" target="_blank">基板地図WMS配信サービス</a>'
-    }), 
-    "農研機構\\地名": L.tileLayer("https://aginfo.cgk.affrc.go.jp/ws/tmc/1.0.0/pntms-900913/{z}/{x}/{y}.png", {
-      tms: true,
-      maxZoom: 18,
-      attribution: '<a href="https://aginfo.cgk.affrc.go.jp/wsdocs/pnwms/index.html.ja" target="_blank">地名WMS配信サービス</a>'
-    }), 
+    //"農研機構\\基板地図25000": L.tileLayer("https://aginfo.cgk.affrc.go.jp/ws/tmc/1.0.0/KBN25000BBB-900913/{z}/{x}/{y}.png", {
+    //  tms: true,
+    //  maxZoom: 18,
+    //  attribution: '<a href="https://aginfo.cgk.affrc.go.jp/wsdocs/kibanwms/index.html.ja" target="_blank">基板地図WMS配信サービス</a>'
+    //}), 
+    //"農研機構\\地名": L.tileLayer("https://aginfo.cgk.affrc.go.jp/ws/tmc/1.0.0/pntms-900913/{z}/{x}/{y}.png", {
+    //  tms: true,
+    //  maxZoom: 18,
+    //  attribution: '<a href="https://aginfo.cgk.affrc.go.jp/wsdocs/pnwms/index.html.ja" target="_blank">地名WMS配信サービス</a>'
+    //}), 
     "地理院地図\\土地条件数値地図25000": L.tileLayer("https://maps.gsi.go.jp/xyz/LCM25K_2012/{z}/{x}/{y}.png", {
       minZoom: 4,
       maxZoom: 16,
